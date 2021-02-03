@@ -1,6 +1,9 @@
 #include <stdio.h>
-/* Print a sentence using puts command
 
+/**
+ * main - Prints some sentence
+ *
+ * Return: 0 before prints the sentence
  */
 
 int main(void)
