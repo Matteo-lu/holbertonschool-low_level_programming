@@ -1,4 +1,7 @@
 #include <stdio.h>
+/* Print a sentence using puts command
+
+ */
 
 int main(void)
 {
