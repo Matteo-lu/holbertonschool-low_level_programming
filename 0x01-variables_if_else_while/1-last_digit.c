@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+/**
+ * main - Display a random number
+ *
+ * Return: 0 before prints the sentence
+ */
+
+int main(void)
+{
+	int n;
+	int LastD;
+
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	LastD = n % 10;
+	if (LastD > 0)
+	{
+		printf("Last digit of %d is %d greater than 5\n", n, LastD);
+	}
+	else if (LastD == 0)
+	{
+		printf("Last digit of %d is %d and is 0\n", n, LastD);
+	}
+	else
+	{
+		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, LastD);
+	}
+	return (0);
+}
