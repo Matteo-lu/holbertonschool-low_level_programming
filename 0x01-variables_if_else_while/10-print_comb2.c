@@ -10,7 +10,7 @@ int main(void)
 {
 	int dec;
 	int und;
-	
+
 	for (dec = '0'; dec <= '9'; dec++)
 	{
 		for (und = '0'; und <= '9'; und++)
