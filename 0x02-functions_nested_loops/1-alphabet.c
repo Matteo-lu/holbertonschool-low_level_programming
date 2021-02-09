@@ -1,17 +1,13 @@
 #include "holberton.h"
 
 /**
- * main - Prints some sentence
+ * print_alphabet - Prints the alphabet
  *
  * Return: 0 before prints the sentence
  *
- * @c: character variable
- *
- * _putchar - Print some character
  */
-int _putchar(char c);
 
-int main(void)
+void print_alphabet(void)
 {
 	char alph;
 
