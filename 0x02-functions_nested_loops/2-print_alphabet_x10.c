@@ -1,24 +1,23 @@
 #include "holberton.h"
 
 /**
- * print_alphabet - Prints the alphabet
+ * print_alphabet_x10 - Prints the alphabet
  *
  * Return: 0 before prints the sentence
  *
  */
 
-void print_alphabet(void)
+void print_alphabet_x10(void)
 {
 	char alph;
 	int times;
 
-	times = 0;
-	for (alph = 'a'; alph <= 'z'; alph++)
+	for (times = 0; times < 10; times++)
 	{
-		while (times < 11)
+		for (alph = 'a'; alph <= 'z'; alph++)
 		{
 			_putchar(alph);
 		}
+		_putchar('\n');
 	}
-	_putchar('\n');
 }
