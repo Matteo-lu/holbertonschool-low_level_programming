@@ -4,6 +4,10 @@
  * main - Prints some sentence
  *
  * Return: 0 before prints the sentence
+ *
+ * @c: character variable
+ *
+ * _putchar - Print some character
  */
 int _putchar(char c);
 
