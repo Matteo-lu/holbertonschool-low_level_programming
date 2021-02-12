@@ -29,7 +29,6 @@ int main(void)
 		}
 		else
 		{
-			
 			printf("%d", i);
 			if (!(i == 99))
 			{
@@ -38,5 +37,5 @@ int main(void)
 		}
 	}
 	printf("\n");
-	return(0);
+	return (0);
 }
