@@ -3,8 +3,8 @@
 /**
  * print_diagonal - Prints numbers from 0 to 14, 10 times
  *
+ * @n: input variable
  *
- * @n: variable 3
  * Return: num variable
  *
  */
@@ -16,10 +16,10 @@ void print_diagonal(int n)
 
 	if (n > 0)
 	{
-		for (x = 0; x <= n - 1; x++)
+		for (x = 0; x < n; x++)
 		{
 
-			for (y = 0; y <= x; y++)
+			for (y = 0; y < x; y++)
 			{
 				_putchar(' ');
 			}
