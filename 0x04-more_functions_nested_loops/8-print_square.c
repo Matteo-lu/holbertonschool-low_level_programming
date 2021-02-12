@@ -3,7 +3,7 @@
 /**
  * print_square - Prints numbers from 0 to 14, 10 times
  *
- * @n: input variable
+ * @size: input variable
  *
  * Return: num variable
  *
@@ -17,7 +17,7 @@ void print_square(int size)
 	if (size != 0)
 		for (x = 0; x < size; x++)
 		{
-			
+
 			for (y = 0; y < size; y++)
 			{
 				_putchar('#');
