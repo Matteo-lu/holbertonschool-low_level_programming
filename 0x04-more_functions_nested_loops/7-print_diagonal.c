@@ -2,8 +2,8 @@
 
 /**
  * print_diagonal - Prints numbers from 0 to 14, 10 times
- * @x: variable 1
- * @y: variable 2
+ *
+ *
  * @n: variable 3
  * Return: num variable
  *
