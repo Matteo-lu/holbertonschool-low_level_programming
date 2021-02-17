@@ -1,10 +1,9 @@
 #include "holberton.h"
-#include <stdio.h>
 
 /**
  * _puts - Checks for a digit
  *
- * @s: Variable s
+ * @str: Variable pointer string
  *
  * Return: Always return 0
  *
