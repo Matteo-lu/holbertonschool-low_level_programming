@@ -4,8 +4,8 @@
 /**
  * reverse_array - Concatenates two strings
  *
- * @dest: Variable pointer to array
- * @src: Variable pointer to array
+ * @a: Variable pointer to array
+ *
  * @n: Variable integer
  * Return: Always return 0
  *
@@ -19,7 +19,7 @@ void reverse_array(int *a, int n)
 
 	for (i = 0; i < n; i++)
 	{
-		aux[n - 1 -i] = a[i];
+		aux[n - 1 - i] = a[i];
 	}
 
 	for (i = 0; i < n; i++)
