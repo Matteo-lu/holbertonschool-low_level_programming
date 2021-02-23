@@ -14,19 +14,13 @@
 char *_strchr(char *s, char c)
 {
 	int i;
-	char *aux;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (c == s[i])
 		{
-			aux = &(s[i]);
-			break;
-		}
-		else
-		{
-			aux = '\0';
+			return (s + i);
 		}
 	}
-	return (aux);
+	return ('\0');
 }
