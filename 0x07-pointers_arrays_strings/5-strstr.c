@@ -19,22 +19,24 @@ char *_strstr(char *haystack, char *needle)
 	int p;
 
 	for (p = 0; needle[p] != '\0'; p++)
+	{
+	}
 
 	for (i = 0; haystack[i] != '\0'; i++)
 	{
 		for (j = 0; needle[j] != '\0'; j++)
 		{
-			if (haystack[i] == ' ')
-			{
-				n = 0;
-			}
 			if (needle[j] == haystack[i])
 			{
 				n++;
 			}
+			if (haystack[i] == ' ')
+			{
+				n = 0;
+			}
 			if (n == p)
 			{
-				return (&(haystack[i - j]));
+				return (haystack + (i - j));
 			}
 		}
 	}
@@ -44,6 +46,6 @@ char *_strstr(char *haystack, char *needle)
 	}
 	else
 	{
-	return ('\0');
+		return ('\0');
 	}
 }
