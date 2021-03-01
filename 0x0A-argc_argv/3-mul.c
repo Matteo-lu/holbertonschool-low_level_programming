@@ -1,10 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "holberton.h"
-#include <ctype.h>
 
 /**
- * main - prints a string, followed by a new line
+ * main - multiplies two numbers
  *
  * @argc: Argument count
  * @argv: Argument vector
