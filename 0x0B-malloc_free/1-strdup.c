@@ -16,10 +16,10 @@ char *_strdup(char *str)
 	int j;
 	int len = 0;
 
-	if (str == '\0')
-		return ('\0');
+	if (str == NULL)
+		return (NULL);
 
-	for (i = 0; str[i] != '\0'; i++)
+	for (i = 0; str[i] != NULL; i++)
 	{
 		len++;
 	}
