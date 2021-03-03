@@ -26,10 +26,14 @@ char *_strdup(char *str)
 
 	aux = malloc((i + 1) * sizeof(char));
 
+	if (aux == NULL)
+		return (NULL);
+
 	while (j <= len)
 	{
 		aux[j] = str[j];
 		j++;
 	}
+	
 	return (aux);
 }
