@@ -18,10 +18,10 @@ int **alloc_grid(int width, int height)
 	int l;
 
 	if (width == 0)
-		return(NULL);
+		return (NULL);
 
 	if (height == 0)
-		return(NULL);
+		return (NULL);
 
 	aux = malloc(height * sizeof(int *));
 
