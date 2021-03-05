@@ -42,7 +42,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		memory[j] = s1[j];
 	}
-	for (k = 0; k < ((i + n) - l); ++k)
+	for (k = 0; s2[k] != '\0'; ++k)
 	{
 		memory[j] = s2[k];
 		j++;
