@@ -28,10 +28,10 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		memory = malloc(nmemb * size);
 		memory[i] = 0;
-		if (memory == NULL)
-		{
-			return (NULL);
-		}
+	}
+	if (memory == NULL)
+	{
+		return (NULL);
 	}
 	return (memory);
 }
