@@ -24,14 +24,15 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	}
 
-	for (i = 0; i < nmemb; i++)
-	{
-		memory = malloc(nmemb * size);
-		memory[i] = 0;
-	}
+	memory = malloc(nmemb * size);
 	if (memory == NULL)
 	{
 		return (NULL);
+	}
+
+	for (i = 0; i < nmemb; i++)
+	{
+		memory[i] = 0;
 	}
 	return (memory);
 }
