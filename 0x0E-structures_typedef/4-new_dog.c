@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * *new_dog - New structure dog 
+ * new_dog - New structure dog
  * @name: Pointer to name
  * @age: Varible to age
  * @owner: Pointer to owner
@@ -11,6 +11,8 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
+	int i, j, k, m;
+
 	dog_t *my_dog;
 
 	my_dog = malloc(sizeof(dog_t));
@@ -18,8 +20,32 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		return (NULL);
 	}
-	my_dog->name = name;
+	for (i = 0; name[i] != '\0'; i++)
+	{
+	}
+
+	my_dog->name = malloc(i * sizeof(char));
+	if (my_dog->name == NULL)
+	{
+		return (NULL);
+	}
+	for (j = 0; j < i; j++)
+	{
+		my_dog->name[j] = name[j];
+	}
 	my_dog->age = age;
-	my_dog->owner = owner;
+	for (k = 0; owner[k] != '\0'; k++)
+	{
+	}
+
+	my_dog->owner = malloc(k * sizeof(char));
+	if (my_dog->owner == NULL)
+	{
+		return (NULL);
+	}
+	for (m = 0; m < k; m++)
+	{
+		my_dog->owner[m] = owner[m];
+	}
 	return (my_dog);
 }
