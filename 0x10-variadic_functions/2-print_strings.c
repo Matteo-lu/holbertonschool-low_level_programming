@@ -36,11 +36,11 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			car = va_arg(parameters, char*);
 
 			if (car == NULL && (i < n - 1))
-				printf("(nill)%s", separator);
+				printf("(nil)%s", separator);
 			else if (i < (n - 1))
 				printf("%s%s", car, separator);
 			else if (car == NULL && (i == n - 1))
-				printf("(nill)");
+				printf("(nil)");
 			else
 				printf("%s", car);
 		}
