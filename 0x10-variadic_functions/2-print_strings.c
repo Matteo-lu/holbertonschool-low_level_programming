@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <stdio.h>
+#include <stddef.h>
 
 /**
  * print_strings -   prints strings, followed by a new line
@@ -23,7 +24,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		{
 			car = va_arg(parameters, char*);
 			if (car == NULL)
-				printf("nil");
+				printf("(nil)");
 			else
 				printf("%s", car);
 		}
