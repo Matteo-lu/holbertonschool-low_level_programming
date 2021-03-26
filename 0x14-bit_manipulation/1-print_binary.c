@@ -8,7 +8,8 @@
  */
 void print_binary(unsigned long int n)
 {
-	int y, z, i, j, x;
+	unsigned long int y, x, z;
+	int i, j;
 
 	z = n;
 	y = 1;
@@ -19,11 +20,10 @@ void print_binary(unsigned long int n)
 	}
 	else
 	{
-	for (j = 0; z >= 1; j++)
+	for (j = 0; z > 1; j++)
 	{
 		z = z >> y;
 	}
-	j = j - 1;
 	for (i = j; i >= 0; i--)
 	{
 		x = n >> i;
