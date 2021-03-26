@@ -13,6 +13,12 @@ void print_binary(unsigned long int n)
 	z = n;
 	y = 1;
 
+	if (n == 0)
+	{
+		_putchar('0');
+	}
+	else
+	{
 	for (j = 0; z >= 1; j++)
 	{
 		z = z >> y;
@@ -22,5 +28,6 @@ void print_binary(unsigned long int n)
 	{
 		x = n >> i;
 		_putchar('0' + (x & 1));
+	}
 	}
 }
