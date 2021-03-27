@@ -14,7 +14,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 
 	c = n ^ m;
 
-	for (i = 0; i < 63; i++)
+	for (i = 0; i <= 63; i++)
 	{
 		x = 1;
 		x = x << i;
