@@ -10,17 +10,11 @@
 int create_file(const char *filename, char *text_content)
 {
 	int i, fd, size;
-	char *c;
 
 	for (i = 0; text_content[i] != '\0'; i++)
 	{
 	}
 
-	c = malloc(i * sizeof(char));
-	if (c == NULL)
-	{
-		return (-1);
-	}
 	fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
 	if (fd < 0)
 	{
