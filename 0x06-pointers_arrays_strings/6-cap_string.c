@@ -13,6 +13,8 @@ char *cap_string(char *str)
 	char separators[] = {',', ';', '.', '!', '"', '?', '(', ')',
 		'{', '}', '\n', '\t', ' '};
 
+	if (str[0] >= 97 && str[0] <= 122)
+		str[0] = str[0] - 32;
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		for (j = 0; separators[j] != '\0'; j++)
