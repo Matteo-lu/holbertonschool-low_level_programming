@@ -1,30 +1,30 @@
 #include "holberton.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * *rot13 - Concatenates two strings
- *
- * @a: Variable pointer to string
- *
- *
+ * @str: Variable pointer to string
  * Return: Always return 0
  *
  */
 
-char *rot13(char *a)
+char *rot13(char *str)
 {
-	int i;
+	char array1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char array2[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	unsigned int i, j;
 
-	for (i = 0; a[i] != '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		if ((a[i] >= 'a' && a[i] <= 'm') || (a[i] >= 'A' && a[i] <= 'M'))
+		for (j = 0; array1[j] != '\0'; j++)
 		{
-			a[i] = a[i] + 13;
-		}
-		else if ((a[i] >= 'n' && a[i] <= 'z') || (a[i] >= 'N' && a[i] <= 'Z'))
-		{
-			a[i] = a[i] - 13;
+			if (str[i] == array1[j])
+			{
+				str[i] = array2[j];
+				break;
+			}
 		}
 	}
-	return (a);
+	return (str);
 }
