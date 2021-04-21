@@ -20,12 +20,7 @@ int (*get_op_func(char *s))(int, int)
 
 	while (ops[i].op != NULL)
 	{
-		if (s[1] != '\0')
-		{
-			printf("Error\n");
-			exit(99);
-		}
-		if (ops[i].op[0] == s[0])
+		if (ops[i].op[0] == s[0] && s[1] == '\0')
 		{
 			return (ops[i].f);
 		}
