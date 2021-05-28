@@ -14,14 +14,12 @@ hash_table_t *hash_table_create(unsigned long int size)
 	hash_table = malloc(sizeof(hash_table_t));
 	if (hash_table == NULL)
 	{
-		dprintf(2, "Error: Can't malloc\n");
 		return (NULL);
 	}
 	hash_table->size = size;
 	hash_table->array = malloc(sizeof(head) * size);
 	if (hash_table->array == NULL)
 	{
-		dprintf(2, "Error: Can't malloc\n");
 		return (NULL);
 	}
 	while (idx < size)
