@@ -1,0 +1,38 @@
+#include "hash_tables.h"
+
+/**
+ * hash_table_set -adds an element to the hash table.
+ *
+ * @key: The key
+ * @ht: The hash table you want to add or update the key/value
+ * @value: s the value associated with the key
+ *
+ * Return: 1 if it succeeded, 0 otherwise
+ */
+int hash_table_set(hash_table_t *ht, const char *key, const char *value)
+{
+	hash_node_t *new_node = NULL;
+	unsigned int index = 0;
+
+	if (strlen(key) == 0)
+		return (0);
+	new_node = malloc(sizeof(hash_node_t));
+	if (new_node == NULL)
+	{
+		dprintf(2, "Error: Can't malloc\n");
+		return (0);
+	}
+	new_node->key = strdup((char *)key);
+	new_node->value = strdup((char *)value);
+	new_node->next = NULL;
+
+	index = key_index((unsigned char *)key, ht->size);
+	if (ht->array[index] == NULL)
+		ht->array[index] = new_node;
+	else
+	{
+		new_node->next = ht->array[index];
+		ht->array[index] = new_node;
+	}
+	return (1);
+}
