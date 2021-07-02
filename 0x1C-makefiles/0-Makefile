@@ -1,0 +1,3 @@
+# makefil to compile holberton project
+all:
+	gcc main.c holberton.c -o holberton
