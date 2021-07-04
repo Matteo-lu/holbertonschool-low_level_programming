@@ -1,0 +1,27 @@
+# makefil to compile holberton project
+CC = gcc
+SRC = main.c holberton.c
+OBJ = $(SRC:.c=.o)
+NAME = holberton
+RM = rm -rf
+
+all: $(NAME)
+
+$(NAME): $(OBJ) m.h
+	$(CC) $(OBJ) -o $@
+
+# deletes all Emacs and Vim temporary files along with the executable
+clean:
+	$(RM) *~ holberton
+
+# deletes deletes the object files
+oclean:
+	$(RM) $(OBJ)
+
+# deletes deletes all Emacs and Vim temporary files, the executable, and the object files
+fclean:
+	$(RM) *~ $(NAME)
+	$(RM) $(OBJ)
+
+#  forces recompilation of all source files
+re: fclean all
