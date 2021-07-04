@@ -8,7 +8,7 @@ RM = rm -rf
 all: $(NAME)
 
 $(NAME): $(OBJ) m.h
-	$(CC) $(OBJ) -o $@
+	$(CC) $(OBJ) -o $(NAME)
 
 # deletes all Emacs and Vim temporary files along with the executable
 clean:
