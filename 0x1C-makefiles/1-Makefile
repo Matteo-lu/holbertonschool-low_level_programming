@@ -1,6 +1,5 @@
 # makefil to compile holberton project
 CC := gcc
 SRC := main.c holberton.c
-
 all:
 	$(CC) $(SRC) -o holberton
