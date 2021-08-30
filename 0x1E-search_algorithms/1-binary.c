@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include "search_algos.h"
 
 /**
@@ -15,6 +14,7 @@
 int binary_search(int *array, size_t size, int value)
 {
 	int first_idx, last_idx, middle_idx, i;
+	char *str_value = "Searching in array: ";
 
 	first_idx = 0;
 	last_idx = size - 1;
@@ -24,12 +24,19 @@ int binary_search(int *array, size_t size, int value)
 
 	while (first_idx <= last_idx)
 	{
-		printf("Searching in array: ");
+		for (i = 0; str_value[i] != '\0'; i++)
+		{
+			putchar(str_value[i]);
+		}
+
 		for (i = first_idx; i < last_idx; i++)
 		{
-			printf("%d, ", array[i]);
+			int_put(array[i]);
+			putchar(',');
+			putchar(' ');
 		}
-		printf("%d\n", array[i]);
+		int_put(array[i]);
+		putchar('\n');
 
 		middle_idx = first_idx + (last_idx - first_idx) / 2;
 
@@ -47,4 +54,23 @@ int binary_search(int *array, size_t size, int value)
 		}
 	}
 	return (-1);
+}
+
+/**
+ * linear_search - function to print integers with putchar
+ * @n: integer to be printed
+ *
+ * Return: nothing
+ */
+void int_put(int n)
+{
+    if (n < 0) {
+        putchar('-');
+        n = -n;
+    }
+
+    if (n/10)
+        int_put(n/10);
+
+    putchar(n%10 + '0');
 }
