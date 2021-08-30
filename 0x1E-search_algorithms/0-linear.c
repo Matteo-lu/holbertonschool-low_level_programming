@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include "search_algos.h"
 
 /**
@@ -14,18 +13,62 @@
  */
 int linear_search(int *array, size_t size, int value)
 {
-	unsigned int i;
+	unsigned int i, j;
+	char *str_value = "value checked array";
 
 	if (array == NULL)
 		return (-1);
 
 	for (i = 0; i < size; i++)
 	{
-		printf("value checked array[%d] = [%d]\n", i, array[i]);
+		for (j = 0; str_value[j] != '\0'; j++)
+		{
+			putchar(str_value[j]);
+		}
+		print_values(i, array[i]);
 		if (array[i] == value)
 		{
 			return (value);
 		}
 	}
 	return (-1);
+}
+
+/**
+ * linear_search - function to print integers with putchar
+ * @i: index where from array of integers
+ * @value: value
+ * Return: nothing
+ */
+void print_values(unsigned int i, int value)
+{
+	putchar('[');
+	int_put(i);
+	putchar(']');
+	putchar(' ');
+	putchar('=');
+	putchar(' ');
+	putchar('[');
+	int_put(value);
+	putchar(']');
+	putchar('\n');
+}
+
+/**
+ * linear_search - function to print integers with putchar
+ * @n: integer to be printed
+ *
+ * Return: nothing
+ */
+void int_put(int n)
+{
+    if (n < 0) {
+        putchar('-');
+        n = -n;
+    }
+
+    if (n/10)
+        int_put(n/10);
+
+    putchar(n%10 + '0');
 }
