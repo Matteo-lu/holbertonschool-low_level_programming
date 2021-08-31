@@ -14,7 +14,7 @@
 int linear_search(int *array, size_t size, int value)
 {
 	unsigned int i, j;
-	char *str_value = "value checked array";
+	char *str_value = "Value checked array";
 
 	if (array == NULL)
 		return (-1);
@@ -28,7 +28,7 @@ int linear_search(int *array, size_t size, int value)
 		print_values(i, array[i]);
 		if (array[i] == value)
 		{
-			return (value);
+			return (i);
 		}
 	}
 	return (-1);
