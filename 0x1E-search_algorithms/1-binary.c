@@ -28,9 +28,11 @@ int binary_search(int *array, size_t size, int value)
 			putchar(str_value[i]);
 
 		for (i = first_idx; i < last_idx; i++)
+		{
 			int_put(array[i]);
 			putchar(',');
 			putchar(' ');
+		}
 
 		int_put(array[i]);
 		putchar('\n');
