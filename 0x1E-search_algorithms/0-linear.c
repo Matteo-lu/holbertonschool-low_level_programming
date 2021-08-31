@@ -35,7 +35,7 @@ int linear_search(int *array, size_t size, int value)
 }
 
 /**
- * linear_search - function to print integers with putchar
+ * print_values - function to print integers with putchar
  * @i: index where from array of integers
  * @value: value
  * Return: nothing
@@ -55,20 +55,21 @@ void print_values(unsigned int i, int value)
 }
 
 /**
- * linear_search - function to print integers with putchar
+ * int_put - function to print integers with putchar
  * @n: integer to be printed
  *
  * Return: nothing
  */
 void int_put(int n)
 {
-    if (n < 0) {
-        putchar('-');
-        n = -n;
-    }
+	if (n < 0)
+	{
+		putchar('-');
+		n = -n;
+	}
 
-    if (n/10)
-        int_put(n/10);
+	if (n / 10)
+		int_put(n / 10);
 
-    putchar(n%10 + '0');
+	putchar(n % 10 + '0');
 }
