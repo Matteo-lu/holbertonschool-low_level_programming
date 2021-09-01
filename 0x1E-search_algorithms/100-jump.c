@@ -22,7 +22,7 @@ int jump_search(int *array, size_t size, int value)
 		return (-1);
 
 	print_prhase(jump_step, array[jump_step], prhase1);
-	jump_step = sqrt(size);;
+	jump_step = sqrt(size);
 
 	while (array[prev] < value)
 	{
@@ -32,7 +32,7 @@ int jump_search(int *array, size_t size, int value)
 		else
 		{
 			prev = jump_step;
-			jump_step = jump_step + sqrt(size);;
+			jump_step = jump_step + sqrt(size);
 		}
 		print_prhase(prev, array[prev], prhase1);
 	}
