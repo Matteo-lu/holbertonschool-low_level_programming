@@ -18,6 +18,9 @@ int jump_search(int *array, size_t size, int value)
 	char *prhase1 = "Value checked array";
 	char *prhase2 = "Value found between indexes ";
 
+	if (array == NULL)
+		return (-1);
+
 	print_prhase(jump_step, array[jump_step], prhase1);
 	jump_step = 3;
 
