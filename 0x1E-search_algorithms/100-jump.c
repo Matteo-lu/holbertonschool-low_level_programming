@@ -14,7 +14,7 @@
  */
 int jump_search(int *array, size_t size, int value)
 {
-	size_t jump_step = 0, prev = 0;
+	size_t jump_step = 0, prev = 0, min_value;
 	char *prhase1 = "Value checked array";
 	char *prhase2 = "Value found between indexes ";
 
@@ -23,8 +23,9 @@ int jump_search(int *array, size_t size, int value)
 
 	print_prhase(jump_step, array[jump_step], prhase1);
 	jump_step = sqrt(size);
+	min_value = fmin(jump_step, size) - 1;
 
-	while (array[prev] < value)
+	while (array[min_value] < value)
 	{
 		if (array[jump_step] >= value || jump_step >= size)
 			break;
