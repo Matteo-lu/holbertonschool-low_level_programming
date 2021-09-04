@@ -97,4 +97,4 @@ done
 <p>You can now type <code>betty &lt;filename&gt;</code> to run the Betty linter!</p>
 <h3>Manual QA Review</h3>
 <p><strong>It is your responsibility to request a review for your blog from a peer before the project’s deadline. If no peers have been reviewed, you should request a review from a TA or staff member.</strong></p>
-</div>
+</div>actualization
